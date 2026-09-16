@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lume — cardápio digital em HTML, CSS e JavaScript." />
+  <title>Lume — Cardápio Digital</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Lume, início"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><b>Lume</b><small>o sabor que ilumina</small></span></a>
+    <nav><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#pedido">Meu pedido <b id="cart-count">0</b></a></nav>
+  </header>
+  <main>
+    <section id="inicio" class="hero section"><div class="hero-copy"><span class="eyebrow">Cozinha brasileira contemporânea</span><h1>Do nosso cardápio<br><em>direto para a sua mesa.</em></h1><p>Escolha seus pratos, acompanhe os valores e envie o pedido para a equipe.</p><a class="button" href="#cardapio">Explorar o cardápio →</a></div><div class="hero-visual"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Mesa com ingredientes frescos" loading="eager"><span>O sabor que<br>ilumina o seu dia.</span></div></section>
+    <section class="editorial section"><div class="editorial-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Prato servido à mesa" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80'"></div><div><span class="eyebrow">Uma casa para cada momento</span><h2>Feito com tempo,<br><em>servido com afeto.</em></h2><p>Ingredientes de pequenos produtores, receitas autorais e uma mesa pronta para receber você.</p><a class="text-link" href="#cardapio">Conheça o cardápio →</a></div></section>
+    <section class="product-stories section"><div class="section-heading"><div><span class="eyebrow">Para inspirar sua escolha</span><h2>Um pouco da<br><em>nossa mesa.</em></h2></div><p>Fotos de referência das nossas famílias de sabores. Os produtos continuam leves e sem imagens dentro dos cards.</p></div><div class="story-grid"><figure><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=82" alt="Ingredientes frescos e coloridos" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80'"><figcaption><b>Entradas</b><span>começos para compartilhar</span></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=82" alt="Prato principal servido" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80'"><figcaption><b>Pratos principais</b><span>o coração da casa</span></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=82" alt="Sobremesa artesanal" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80'"><figcaption><b>Sobremesas</b><span>um final feliz</span></figcaption></figure></div></section>
+    <section id="cardapio" class="section menu-section"><div class="section-heading"><div><span class="eyebrow">150 criações da casa</span><h2>Escolha com calma<br><em>o seu momento.</em></h2></div><p>Pesquise por nome, filtre por categoria e adicione ao pedido sem sair da página.</p></div><div class="toolbar"><label>⌕ <input id="search" type="search" placeholder="Buscar prato, bebida ou vinho..." /></label><span id="result-count">150 itens</span></div><div id="categories" class="categories"></div><div class="menu-layout"><div><div id="product-grid" class="product-grid"></div><div id="pagination" class="pagination"></div></div><aside id="pedido" class="order-panel"><div class="order-title"><div><span class="eyebrow">Sua seleção</span><h2>Meu pedido</h2></div><span class="bag">⌑</span></div><div id="cart-items" class="cart-items"><p class="empty">Seu pedido está vazio.<br>Escolha algo no cardápio.</p></div><div class="order-bottom"><label class="service"><input id="service-fee" type="checkbox" checked> Adicionar 10% do garçom</label><div class="totals"><span>Subtotal <b id="subtotal">R$ 0,00</b></span><span>Garçom <b id="service">R$ 0,00</b></span><strong>Total <b id="total">R$ 0,00</b></strong></div><button id="checkout-button" class="button full">Finalizar pedido →</button></div></aside></div></section>
+    <section id="confirmation" class="confirmation section hidden"></section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/menu-data.js"></script><script src="/app.js"></script>
+</body>
+</html>
